@@ -1,0 +1,148 @@
+/* ======================================= */
+/* Components / отдельные элементы сайта   */
+/* ======================================= */
+
+/* Логотип */
+.logo {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Навигация */
+.nav a {
+  margin-left: 20px;
+  font-weight: 500;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: #facc15; /* акцентный желтый */
+}
+
+/* ======================================= */
+/* Карточки достопримечательностей         */
+/* ======================================= */
+.card {
+  background: #f4f4f4;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Картинки */
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* Заголовок карточки */
+.card h3 {
+  margin: 10px 0;
+  color: #1e3a8a;
+  font-size: 1.2rem;
+}
+
+/* Текст карточки */
+.card p {
+  font-size: 14px;
+  flex-grow: 1;
+  margin-bottom: 10px;
+}
+
+/* ======================================= */
+/* Факты и контактные карточки             */
+/* ======================================= */
+.fact-card, .contact-card {
+  background: #f4f4f4;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fact-card:hover, .contact-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+}
+
+.fact-card h4, .contact-card h3 {
+  color: #1e3a8a;
+  margin-bottom: 10px;
+}
+
+/* ======================================= */
+/* Кнопки                                  */
+/* ======================================= */
+.btn, .btn-small {
+  display: inline-block;
+  background-color: #1e3a8a;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  text-align: center;
+  transition: background 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn:hover, .btn-small:hover {
+  background-color: #facc15;
+  color: #1e3a8a;
+  transform: translateY(-2px);
+}
+
+/* Малые кнопки */
+.btn-small {
+  padding: 7px 15px;
+  font-size: 0.9rem;
+}
+
+/* ======================================= */
+/* Hero-блок текст */
+.hero-content h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ======================================= */
+/* Footer */
+.footer {
+  background: #1e3a8a;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+}
+
+/* ======================================= */
+/* Адаптивные карточки */
+.cards, .fact-cards, .contact-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}

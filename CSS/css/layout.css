@@ -1,0 +1,115 @@
+/* ======================================= */
+/* Layout / структура страниц              */
+/* ======================================= */
+
+/* Header */
+.header {
+  background: #1e3a8a;
+  color: white;
+  padding: 15px 0;
+}
+
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Логотип */
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+/* Навигация */
+.nav a {
+  color: white;
+  margin-left: 20px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: #facc15; /* желтый для акцента */
+}
+
+/* Hero-блок */
+.hero {
+  background: url("../images/hero.jpg") center/cover no-repeat;
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-small {
+  padding: 60px 20px;
+  min-height: 40vh;
+}
+
+/* Основные секции */
+.section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Grid для карточек */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  align-items: stretch;
+}
+
+/* Футер */
+.footer {
+  background: #1e3a8a;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Контейнер для центровки содержимого */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .header-flex {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav a {
+    margin: 0 10px;
+  }
+
+  .hero {
+    padding: 80px 10px;
+  }
+
+  .section {
+    padding: 40px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 60px 10px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>О городе Астана</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Стили -->
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    /* Hero-блок */
+    .hero {
+      position: relative;
+      background: url('https://astanatimes.com/wp-content/uploads/2017/05/2-Astana-night-life-during-EXPO-summer-trip.jpg') center/cover no-repeat;
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 20px;
+      transition: transform 0.5s ease;
+    }
+
+    .hero:hover {
+      transform: scale(1.02);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 0;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      color: white;
+      text-align: center;
+      animation: fadeIn 1s ease forwards;
+      opacity: 0;
+    }
+
+    .hero-content h2 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+
+    .hero-content p {
+      font-size: 1.3rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    /* Текст о городе */
+    .about-content p {
+      font-size: 1rem;
+      margin-bottom: 20px;
+      line-height: 1.7;
+    }
+
+    /* Карточки достопримечательностей */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-top: 20px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover img {
+      transform: scale(1.05);
+    }
+
+    .card-content {
+      padding: 15px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-content h3 {
+      color: #1e3a8a;
+      margin-bottom: 8px;
+    }
+
+    .card-content p {
+      flex-grow: 1;
+      font-size: 0.95rem;
+      margin-bottom: 10px;
+    }
+
+    .btn-wiki {
+      display: inline-block;
+      background-color: #1e3a8a;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: 500;
+      text-decoration: none;
+      text-align: center;
+      transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    }
+
+    .btn-wiki:hover {
+      background-color: #facc15;
+      color: #1e3a8a;
+      transform: translateY(-2px);
+    }
+
+    /* Footer */
+    .footer {
+      background: #1e3a8a;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+      font-size: 0.9rem;
+    }
+
+    /* Адаптивность */
+    @media (max-width: 768px) {
+      .hero-content h2 {
+        font-size: 2rem;
+      }
+
+      .hero-content p {
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-content h2 {
+        font-size: 1.6rem;
+      }
+
+      .hero-content p {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="container header-flex">
+    <h1 class="logo">Астана</h1>
+    <nav class="nav">
+      <a href="../index.html">Главная</a>
+      <a href="about.html">О городе</a>
+      <a href="places.html">Достопримечательности</a>
+      <a href="contacts.html">Контакты</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO SECTION -->
+<section class="hero hero-small">
+  <div class="container hero-content">
+    <h2>О городе Астана</h2>
+    <p>Молодая и быстроразвивающаяся столица Казахстана с современной архитектурой и богатой культурой.</p>
+  </div>
+</section>
+
+<!-- MAIN CONTENT -->
+<main class="section">
+  <div class="container about-content">
+    <p>
+      Астана — столица Республики Казахстан, основанная в 1997 году. За короткое время город превратился в современный мегаполис с уникальными архитектурными объектами.
+    </p>
+    <p>
+      Здесь сочетаются футуристические здания, широкие бульвары и зеленые зоны. Город активно развивается как культурный, экономический и туристический центр страны.
+    </p>
+
+    <h3>Главные достопримечательности</h3>
+    <div class="cards">
+      <article class="card">
+        <img src="https://cdn.pixabay.com/photo/2021/06/14/06/27/baiterek-6335025_1280.jpg" alt="Байтерек">
+        <div class="card-content">
+          <h3>Байтерек</h3>
+          <p>Главный символ столицы и смотровая площадка с панорамным видом на город.</p>
+          <a href="https://ru.wikipedia.org/wiki/Байтерек_(Астана)" target="_blank" class="btn-wiki">Подробнее</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2d/0c/7f/33/it-is-wonderful-to-such.jpg?w=1200&h=-1&s=1" alt="Центральная мечеть">
+        <div class="card-content">
+          <h3>Центральная мечеть</h3>
+          <p>Одна из крупнейших мечетей Центральной Азии, архитектурная жемчужина города.</p>
+          <a href="https://ru.wikipedia.org/wiki/Центральная_мечеть_Астаны" target="_blank" class="btn-wiki">Подробнее</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://astana.citypass.kz/wp-content/uploads/%D1%85%D0%B0%D0%BD%D1%88%D0%B0%D1%82%D1%8B%D1%80.jpg" alt="Хан Шатыр">
+        <div class="card-content">
+          <h3>Хан Шатыр</h3>
+          <p>Необычный торгово-развлекательный центр в форме гигантского шатра.</p>
+          <a href="https://ru.wikipedia.org/wiki/Хан_Шатыр" target="_blank" class="btn-wiki">Подробнее</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <p>© 2026 Туристический сайт города Астана</p>
+  </div>
+</footer>
+
+</body>
+</html>

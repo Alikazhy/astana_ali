@@ -1,0 +1,78 @@
+/* ======================================= */
+/*  Reset CSS для всего проекта            */
+/* ======================================= */
+
+/* Универсальный сброс */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Основные элементы текста */
+body, h1, h2, h3, h4, h5, h6, p, blockquote, pre {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: normal;
+  line-height: 1.5;
+}
+
+/* Списки */
+ul, ol {
+  list-style: none;
+}
+
+/* Ссылки */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Изображения и видео */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Таблицы */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Формы и кнопки */
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+/* Контейнеры */
+body {
+  min-height: 100vh;
+}
+
+/* Кнопки по умолчанию */
+button {
+  cursor: pointer;
+}
+
+/* Скрытие скроллбаров для ненужных блоков */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* Ссылки с hover и focus */
+a:focus,
+a:hover {
+  text-decoration: none;
+  outline: none;
+}

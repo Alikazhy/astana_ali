@@ -1,0 +1,93 @@
+/* ======================================= */
+/* Base styles / базовые стили              */
+/* ======================================= */
+
+/* Body и общие настройки */
+body {
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+  background-color: #fefefe;
+}
+
+/* Ссылки */
+a {
+  text-decoration: none;
+  color: #1e3a8a;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #facc15; /* акцентный желтый */
+}
+
+/* Контейнер */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Заголовки */
+h1, h2, h3, h4, h5, h6 {
+  color: #1e3a8a;
+  margin-bottom: 15px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.75rem; }
+h3 { font-size: 1.4rem; }
+h4 { font-size: 1.2rem; }
+h5 { font-size: 1rem; }
+h6 { font-size: 0.9rem; }
+
+/* Параграфы */
+p {
+  margin-bottom: 15px;
+}
+
+/* Списки */
+ul, ol {
+  padding-left: 20px;
+}
+
+/* Кнопки по умолчанию */
+button, .btn, .btn-small {
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+/* Формы */
+input, textarea, select {
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+/* Отступы секций */
+.section p, .section h2 {
+  margin-bottom: 20px;
+}
+
+/* Адаптивная типографика */
+@media (max-width: 768px) {
+  body {
+    font-size: 15px;
+  }
+
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.2rem; }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  h1 { font-size: 1.5rem; }
+  h2 { font-size: 1.25rem; }
+  h3 { font-size: 1.1rem; }
+}
